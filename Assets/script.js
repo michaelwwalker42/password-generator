@@ -1,4 +1,16 @@
+// generate password
+// prompt for password criteria
+// password length at least 8 characters less than 128
+// character types: lowercase, uppercase, numeric, and/or special chars                                                                      
+// confirm which character types to include in password
+// when each prompt answered, input should be validated and at least one char type selected
+// when all prompts answered a password is generated that matches criteria
+// when password is generated it is displayed in an alert or written to the page
+
+
+
 // Assignment code here
+
 
 
 // Get references to the #generate element
