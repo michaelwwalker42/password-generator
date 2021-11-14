@@ -5,11 +5,19 @@
 // confirm which character types to include in password
 // when each prompt answered, input should be validated and at least one char type selected
 // when all prompts answered a password is generated that matches criteria
-// when password is generated it is displayed in an alert or written to the page
-
 
 
 // Assignment code here
+var generatePassword = function() {
+  var criteriaLength = window.prompt('How many characters (at least 8, and up to 128)?');     // variable for password length
+  if (criteriaLength <8 || criteriaLength > 128){
+    window.alert("That is not a valid answer. Please try again.");
+    
+  }
+ 
+  return criteriaLength; 
+  
+}
 
 
 
@@ -23,7 +31,7 @@ function writePassword() {
 
   passwordText.value = password;
 
-}
+}                                                             
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword);                 
