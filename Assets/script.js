@@ -6,18 +6,29 @@
 // when each prompt answered, input should be validated and at least one char type selected
 // when all prompts answered a password is generated that matches criteria
 
+// String.fromCharCode() to use numbers, letters, and symbols
+
 
 // Assignment code here
-var generatePassword = function() {
-  var criteriaLength = window.prompt('How many characters (at least 8, and up to 128)?');     // variable for password length
-  if (criteriaLength <8 || criteriaLength > 128){
+
+//-----------------------------------------------FUNCTION FOR PASSWORD LENGTH----------------------------------
+var getPasswordLength = function() {
+  var passwordLength = window.prompt('How many characters (at least 8, and up to 128)?');    
+  if (passwordLength >= 8 && passwordLength <= 128){
+    console.log(passwordLength);
+    return passwordLength;  
+
+  } else {
     window.alert("That is not a valid answer. Please try again.");
-    
+    getPasswordLength();   
   }
- 
-  return criteriaLength; 
-  
 }
+getPasswordLength();
+
+//------------------------------------------------------------------------------------------------------------  
+ 
+ 
+
 
 
 
