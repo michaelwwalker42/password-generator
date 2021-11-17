@@ -1,17 +1,5 @@
-// generate password
-// prompt for password criteria
-// password length at least 8 characters less than 128
-// character types: lowercase, uppercase, numeric, and/or special chars                                                                      
-// confirm which character types to include in password
-// when each prompt answered, input should be validated and at least one char type selected
-// when all prompts answered a password is generated that matches criteria
-
-// String.fromCharCode() to use numbers, letters, and symbols
-
 
 // Assignment code here
-
-
 
 //-----------------------------------------------getPasswordLength function----------------------------------
 function getPasswordLength() {
@@ -26,6 +14,7 @@ function getPasswordLength() {
   }
 }
 //-------------------------------------------------------------------------------------------------------------
+
 
 //------------------------------------------confirmLowercase function------------------------------------------
 function confirmLowercase() {
@@ -56,7 +45,8 @@ function confirmUppercase() {
 };
 //-------------------------------------------------------------------------------------------------------------
 
-//----------------------------------------confirmNumbers function--------------------------------------------
+
+//----------------------------------------confirmNumbers function----------------------------------------------
 function confirmNumbers() {
   numbersYes = window.confirm("Do you want to include numbers?");
   if (!numbersYes){
@@ -68,7 +58,8 @@ function confirmNumbers() {
   }
   return numbersYes;
 };
-//-------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------
+
 
 //--------------------------------------- confirmSpecialChars function--------------------------------------------
 function confirmSpecialChars() {
@@ -85,19 +76,36 @@ function confirmSpecialChars() {
 //-------------------------------------------------------------------------------------------------------------
 
 
+//---------------------------------------validateChars function------------------------------------------------
+function validateChars() {
+  confirmLowercase();
+  confirmUppercase();
+  confirmSpecialChars();
+  confirmNumbers();
+  var passwordChars = specialCharsYes + numbersYes + upperCaseYes + lowerCaseYes;
+  if (!passwordChars) {
+    window.alert("Your password needs at least one character type");
+    validateChars();
+  } else {
+  return passwordChars;  
+  }
+};
+//--------------------------------------------------------------------------------------------------------------
+
+
 
 
 // Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+//var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+//   passwordText.value = password;
 
-}                                                             
+// }                                                             
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);                 
+// // Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);                 
