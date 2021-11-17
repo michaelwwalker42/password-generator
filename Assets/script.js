@@ -30,9 +30,13 @@ function getPasswordLength() {
 //------------------------------------------confirmLowercase function------------------------------------------
 function confirmLowercase() {
   lowerCaseYes = window.confirm("Do you want to include lowercase letters?"); 
-  if (lowerCaseYes){
-  console.log("password includes lowercase")
-  }  
+  if (!lowerCaseYes){ 
+    lowerCaseYes = "";
+    console.log("password does not include lowercase");
+  } else {
+    lowerCaseYes = "abcdefghijklmnopqrstuvwxyz";
+    console.log("password includes lowercase");
+   }  
   return lowerCaseYes;
 };
 //-------------------------------------------------------------------------------------------------------------
@@ -41,8 +45,12 @@ function confirmLowercase() {
 //----------------------------------------confirmUppercase function--------------------------------------------
 function confirmUppercase() {
   upperCaseYes = window.confirm("Do you want to include uppercase letters?");
-  if (upperCaseYes){
-  console.log("password includes uppercase")
+  if (!upperCaseYes){
+    upperCaseYes = "";
+    console.log("password does not include uppercase");
+  } else {
+    upperCaseYes = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    console.log("password includes uppercase");
   }
   return upperCaseYes;
 };
@@ -51,10 +59,28 @@ function confirmUppercase() {
 //----------------------------------------confirmNumbers function--------------------------------------------
 function confirmNumbers() {
   numbersYes = window.confirm("Do you want to include numbers?");
-  if (numbersYes){
-  console.log("password includes numbers")
+  if (!numbersYes){
+    numbersYes = "";
+    console.log("password does not include numbers");
+  } else {
+    numbersYes = "0123456789";
+    console.log("password includes numbers");
   }
   return numbersYes;
+};
+//-------------------------------------------------------------------------------------------------------------
+
+//--------------------------------------- confirmSpecialChars function--------------------------------------------
+function confirmSpecialChars() {
+  specialCharsYes = window.confirm("Do you want to include special characters?");
+  if (!specialCharsYes){
+    specialCharsYes = "";
+    console.log("password does not include special characters");
+  } else {
+    specialCharsYes = "!@#$%^&*";
+    console.log("password includes special characters");
+  }
+  return specialCharsYes;
 };
 //-------------------------------------------------------------------------------------------------------------
 
