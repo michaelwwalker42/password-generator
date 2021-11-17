@@ -11,11 +11,13 @@
 
 // Assignment code here
 
-//-----------------------------------------------FUNCTION FOR PASSWORD LENGTH----------------------------------
-var getPasswordLength = function() {
+
+
+//-----------------------------------------------getPasswordLength function----------------------------------
+function getPasswordLength() {
   var passwordLength = window.prompt('How many characters (at least 8, and up to 128)?');    
   if (passwordLength >= 8 && passwordLength <= 128){
-    console.log(passwordLength);
+    console.log("password length is " + passwordLength);
     return passwordLength;  
 
   } else {
@@ -23,11 +25,38 @@ var getPasswordLength = function() {
     getPasswordLength();   
   }
 }
-getPasswordLength();
+//-------------------------------------------------------------------------------------------------------------
 
-//------------------------------------------------------------------------------------------------------------  
- 
- 
+//------------------------------------------confirmLowercase function------------------------------------------
+function confirmLowercase() {
+  lowerCaseYes = window.confirm("Do you want to include lowercase letters?"); 
+  if (lowerCaseYes){
+  console.log("password includes lowercase")
+  }  
+  return lowerCaseYes;
+};
+//-------------------------------------------------------------------------------------------------------------
+
+
+//----------------------------------------confirmUppercase function--------------------------------------------
+function confirmUppercase() {
+  upperCaseYes = window.confirm("Do you want to include uppercase letters?");
+  if (upperCaseYes){
+  console.log("password includes uppercase")
+  }
+  return upperCaseYes;
+};
+//-------------------------------------------------------------------------------------------------------------
+
+//----------------------------------------confirmNumbers function--------------------------------------------
+function confirmNumbers() {
+  numbersYes = window.confirm("Do you want to include numbers?");
+  if (numbersYes){
+  console.log("password includes numbers")
+  }
+  return numbersYes;
+};
+//-------------------------------------------------------------------------------------------------------------
 
 
 
