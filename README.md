@@ -24,5 +24,6 @@ THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 
-![password generator screenshot] (https://github.com/michaelwwalker42/password-generator/blob/main/Assets/images/password-generator-screen.png)
+![password generator screenshot] (https://github.com/michaelwwalker42/password-generator/blob/main/Assets/images/password-generator-screen.png?raw=true)
 
+[Link to Page](https://michaelwwalker42.github.io/password-generator/)
